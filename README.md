@@ -1,4 +1,10 @@
-# Http
+# Desafio-nexti-jr-frontend
+
+# Para executar o programa:
+
+1. Abra o terminal.
+2. Navegue até o local do projeto.
+2. Execute o comando $ng serve --open
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
 

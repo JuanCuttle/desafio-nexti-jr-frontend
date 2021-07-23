@@ -18,7 +18,6 @@ export class AppComponent {
   
   getDataFromAPI() {
 	  this.services.getData().subscribe((data) => {
-		  //System.out.println(data);
 		  this.data = data;
 	  });
   }
