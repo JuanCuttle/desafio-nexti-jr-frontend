@@ -10,15 +10,16 @@ import {ServicesService} from './services.service';
 export class AppComponent {
   title = 'http';
   
-  data: Array<Cliente>;
+  clientes: Array<any> = [];
   
   constructor(private services:ServicesService) {
-	  this.data = new Array<Cliente>();
+	  //this.data = new Array<Cliente>();
   }
   
   getDataFromAPI() {
 	  this.services.getData().subscribe((data) => {
-		  this.data = data;
+		  this.clientes =  data;
+      console.log(this.clientes);
 	  });
   }
 }

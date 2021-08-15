@@ -13,10 +13,10 @@ export class ServicesService {
 	
   constructor(private http:HttpClient) {}
   
-  getData(): Observable<Array<Cliente>> {
+  getData(): Observable<Array<any>> {
 	  
 	  const url = "http://localhost:8080/api/v1/clientes/";
-	  return this.http.get<Array<Cliente>>(url, requestOptions);
+	  return this.http.get<Array<any>>(url, requestOptions);
   }  
 }
 
