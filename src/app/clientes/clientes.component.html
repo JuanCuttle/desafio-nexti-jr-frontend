@@ -1,0 +1,6 @@
+<button (click)="getClientes()">Listar clientes</button>
+<ul *ngFor="let c of clientes">
+	<li>
+		{{c.id}} - {{c.nome}} - {{c.cpf}} - {{c.dataDeNascimento}}
+	</li>
+</ul>

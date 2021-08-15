@@ -1,20 +1,5 @@
-<button (click)="getClientes()">Listar clientes</button>
-<ul *ngFor="let c of clientes">
-	<li>
-		{{c.id}} - {{c.nome}} - {{c.cpf}} - {{c.dataDeNascimento}}
-	</li>
-</ul>
+<app-clientes></app-clientes>
 
-<button (click)="getProdutos()">Listar produtos</button>
-<ul *ngFor="let p of produtos">
-	<li>
-		{{p.id}} - {{p.nome}} - {{p.descricao}} - {{p.preco}} - {{p.quantidade}}
-	</li>
-</ul>
+<app-produtos></app-produtos>
 
-<button (click)="getPedidos()">Listar pedidos</button>
-<ul *ngFor="let p of pedidos">
-	<li>
-		{{p.id}} - {{p.idCliente}} - {{p.totalDaCompra}} - {{p.dataDaCompra}} - {{p.produtos}}
-	</li>
-</ul>
+<app-pedidos></app-pedidos>

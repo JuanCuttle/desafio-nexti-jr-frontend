@@ -1,0 +1,6 @@
+<button (click)="getPedidos()">Listar pedidos</button>
+<ul *ngFor="let p of pedidos">
+	<li>
+		{{p.id}} - {{p.idCliente}} - {{p.totalDaCompra}} - {{p.dataDaCompra}} - {{p.produtos}}
+	</li>
+</ul>

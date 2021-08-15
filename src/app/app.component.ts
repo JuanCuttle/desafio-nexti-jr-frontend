@@ -10,30 +10,9 @@ import {ServicesService} from './services.service';
 export class AppComponent {
   title = 'http';
   
-  clientes: Array<any> = [];
-  produtos: Array<any> = [];
-  pedidos: Array<any> = [];
-  
   constructor(private services:ServicesService) {
   }
-  
-  getClientes() {
-	  this.services.getClientes().subscribe((data) => {
-		  this.clientes =  data;
-	  });
-  }
 
-  getProdutos() {
-	  this.services.getProdutos().subscribe((data) => {
-		  this.produtos =  data;
-	  });
-  }
-
-  getPedidos() {
-	  this.services.getPedidos().subscribe((data) => {
-		  this.pedidos =  data;
-	  });
-  }
 }
 
 export interface Cliente {

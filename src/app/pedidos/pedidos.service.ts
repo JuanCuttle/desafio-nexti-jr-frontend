@@ -1,22 +1,22 @@
+import { Injectable } from '@angular/core';
 import {HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs/internal/Observable';
-import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ServicesService {
+export class PedidosService {
 
-  urlCPedidos = "http://localhost:8080/api/v1/pedidos/";
-	
-  constructor(private http:HttpClient) {}
+  urlPedidos = "http://localhost:8080/api/v1/pedidos/";
+
+  constructor(private http:HttpClient) { }
 
   getPedidos(): Observable<Array<any>> {
-	  return this.http.get<Array<any>>(this.urlCPedidos, requestOptions);
-  }  
+	  return this.http.get<Array<any>>(this.urlPedidos, requestOptions);
+  }
+  
 }
-
 const headerDict = {
   'Content-Type': 'application/json',
   'Accept': 'application/json',

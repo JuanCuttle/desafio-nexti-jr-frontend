@@ -1,0 +1,6 @@
+<button (click)="getProdutos()">Listar produtos</button>
+<ul *ngFor="let p of produtos">
+	<li>
+		{{p.id}} - {{p.nome}} - {{p.descricao}} - {{p.preco}} - {{p.quantidade}}
+	</li>
+</ul>
