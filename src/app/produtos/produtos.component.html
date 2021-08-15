@@ -1,6 +1,37 @@
-<button (click)="getProdutos()">Listar produtos</button>
-<ul *ngFor="let p of produtos">
+<h2>Gerenciamento de Pedidos</h2>
+
+<ul>
 	<li>
-		{{p.id}} - {{p.nome}} - {{p.descricao}} - {{p.preco}} - {{p.quantidade}}
+		<button (click)="getProdutos()">Listar produtos</button>
+		<ul *ngFor="let p of produtos">
+			<li>
+				{{p.id}} - {{p.nome}} - {{p.descricao}} - {{p.preco}} - {{p.quantidade}}
+			</li>
+		</ul>
+	</li>
+	<li>
+		<button (click)="getProdutos()">Inserir produto</button>
+		<ul *ngFor="let p of produtos">
+			<li>
+				{{p.id}} - {{p.nome}} - {{p.descricao}} - {{p.preco}} - {{p.quantidade}}
+			</li>
+		</ul>
+	</li>
+	<li>
+		<button (click)="getProdutos()">Atualizar produto</button>
+		<ul *ngFor="let p of produtos">
+			<li>
+				{{p.id}} - {{p.nome}} - {{p.descricao}} - {{p.preco}} - {{p.quantidade}}
+			</li>
+		</ul>
+	</li>
+	<li>
+		<button (click)="getProdutos()">Excluir produto</button>
+		<ul *ngFor="let p of produtos">
+			<li>
+				{{p.id}} - {{p.nome}} - {{p.descricao}} - {{p.preco}} - {{p.quantidade}}
+			</li>
+		</ul>
 	</li>
 </ul>
+

@@ -1,6 +1,36 @@
-<button (click)="getClientes()">Listar clientes</button>
-<ul *ngFor="let c of clientes">
+<h2>Gerenciamento de clientes</h2>
+
+<ul>
 	<li>
-		{{c.id}} - {{c.nome}} - {{c.cpf}} - {{c.dataDeNascimento}}
+		<button (click)="getClientes()">Listar clientes</button>
+		<ul *ngFor="let c of clientes">
+			<li>
+				{{c.id}} - {{c.nome}} - {{c.cpf}} - {{c.dataDeNascimento}}
+			</li>
+		</ul>
+	</li>
+	<li>
+		<button (click)="getClientes()">Incluir cliente</button>
+		<ul *ngFor="let c of clientes">
+			<li>
+				{{c.id}} - {{c.nome}} - {{c.cpf}} - {{c.dataDeNascimento}}
+			</li>
+		</ul>
+	</li>
+	<li>
+		<button (click)="getClientes()">Atualizar cliente</button>
+		<ul *ngFor="let c of clientes">
+			<li>
+				{{c.id}} - {{c.nome}} - {{c.cpf}} - {{c.dataDeNascimento}}
+			</li>
+		</ul>
+	</li>
+	<li>
+		<button (click)="getClientes()">Excluir cliente</button>
+		<ul *ngFor="let c of clientes">
+			<li>
+				{{c.id}} - {{c.nome}} - {{c.cpf}} - {{c.dataDeNascimento}}
+			</li>
+		</ul>
 	</li>
 </ul>
