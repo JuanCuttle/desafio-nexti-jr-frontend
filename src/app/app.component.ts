@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {ServicesService} from './services.service';
 
 
 @Component({
@@ -10,30 +9,7 @@ import {ServicesService} from './services.service';
 export class AppComponent {
   title = 'http';
   
-  constructor(private services:ServicesService) {
+  constructor() {
   }
 
 }
-
-export interface Cliente {
-	id: number;
-	nome: String;
-	cpf: String;
-	dataDeNascimento: String;
-};
-
-export interface Produto {
-	id: number;
-	nome: String;
-	descricao: String;
-	preco: number;
-  quantidade: number
-};
-
-export interface Pedido {
-	id: number;
-	idCliente: String;
-	totalDaCompra: number;
-	dataDaCompra: String;
-  produtos: Array<number>;
-};
