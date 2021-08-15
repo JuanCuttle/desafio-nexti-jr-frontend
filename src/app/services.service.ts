@@ -9,14 +9,22 @@ import {HttpClient} from '@angular/common/http';
 })
 export class ServicesService {
 
-	
+	urlClientes = "http://localhost:8080/api/v1/clientes/";
+  urlProdutos = "http://localhost:8080/api/v1/produtos/";
+  urlCPedidos = "http://localhost:8080/api/v1/pedidos/";
 	
   constructor(private http:HttpClient) {}
   
-  getData(): Observable<Array<any>> {
-	  
-	  const url = "http://localhost:8080/api/v1/clientes/";
-	  return this.http.get<Array<any>>(url, requestOptions);
+  getClientes(): Observable<Array<any>> {
+	  return this.http.get<Array<any>>(this.urlClientes, requestOptions);
+  }
+
+  getProdutos(): Observable<Array<any>> {
+	  return this.http.get<Array<any>>(this.urlProdutos, requestOptions);
+  }  
+
+  getPedidos(): Observable<Array<any>> {
+	  return this.http.get<Array<any>>(this.urlCPedidos, requestOptions);
   }  
 }
 

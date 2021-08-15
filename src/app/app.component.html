@@ -1,6 +1,20 @@
-<button (click)="getDataFromAPI()">GET Clients from backend</button>
+<button (click)="getClientes()">Listar clientes</button>
 <ul *ngFor="let c of clientes">
 	<li>
 		{{c.id}} - {{c.nome}} - {{c.cpf}} - {{c.dataDeNascimento}}
+	</li>
+</ul>
+
+<button (click)="getProdutos()">Listar produtos</button>
+<ul *ngFor="let p of produtos">
+	<li>
+		{{p.id}} - {{p.nome}} - {{p.descricao}} - {{p.preco}} - {{p.quantidade}}
+	</li>
+</ul>
+
+<button (click)="getPedidos()">Listar pedidos</button>
+<ul *ngFor="let p of pedidos">
+	<li>
+		{{p.id}} - {{p.idCliente}} - {{p.totalDaCompra}} - {{p.dataDaCompra}} - {{p.produtos}}
 	</li>
 </ul>
