@@ -1,4 +1,4 @@
-<h2>Gerenciamento de clientes</h2>
+<h2>Gerenciamento de Clientes</h2>
 
 <ul>
 	<li>
@@ -9,13 +9,17 @@
 			</li>
 		</ul>
 	</li>
+
 	<li>
-		<button (click)="getClientes()">Incluir cliente</button>
-		<ul *ngFor="let c of clientes">
-			<li>
-				{{c.id}} - {{c.nome}} - {{c.cpf}} - {{c.dataDeNascimento}}
-			</li>
-		</ul>
+		<form>
+			<label for="name">Name:</label><br>
+			<input type="text" id="name" name="name"><br>
+			<label for="cpf">Cpf:</label><br>
+			<input type="text" id="cpf" name="cpf"><br>
+			<label for="dataDeNascimento">Data de nascimento:</label><br>
+			<input type="text" id="dataDeNascimento" name="dataDeNascimento"><br>
+			<input type="submit" value="Incluir Cliente" (click)="postCliente()"><br>
+		</form>
 	</li>
 	<li>
 		<button (click)="getClientes()">Atualizar cliente</button>

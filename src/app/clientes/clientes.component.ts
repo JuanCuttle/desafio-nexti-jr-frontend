@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ClientesService} from './clientes.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-clientes',
@@ -10,7 +11,11 @@ export class ClientesComponent implements OnInit {
 
   clientes: Array<any> = [];
 
-  constructor(private services:ClientesService) { }
+  nome: any;
+  cpf: any;
+  dataDeNascimento: any;
+
+  constructor(private services:ClientesService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
@@ -19,6 +24,17 @@ export class ClientesComponent implements OnInit {
 	  this.services.getClientes().subscribe((data) => {
 		  this.clientes =  data;
 	  });
+  }
+
+  postCliente(){
+    this.route.queryParamMap.subscribe(
+      (params => {
+        console.log(params.keys);
+        //this.nome = params.nome;
+        //console.log(this.nome);
+      })
+    );
+    this.services.postCliente(this.nome, this.cpf, this.dataDeNascimento).subscribe();
   }
 
 }

@@ -15,6 +15,10 @@ export class ClientesService {
   getClientes(): Observable<Array<any>> {
 	  return this.http.get<Array<any>>(this.urlClientes, requestOptions);
   }
+
+  postCliente(nome: any, cpf: any, dataDeNascimento: any): Observable<any> {
+    return this.http.post(this.urlClientes, {'nome': nome, 'cpf': cpf, 'dataDeNascimento': dataDeNascimento}, requestOptions);
+  }
   
 }
 const headerDict = {
@@ -25,4 +29,11 @@ const headerDict = {
 
 const requestOptions = {                                                                                                                                                                                 
 	headers: new HttpHeaders(headerDict), 
+};
+
+export interface Cliente {
+	id: number;
+	nome: String;
+	cpf: String;
+	dataDeNascimento: String;
 };
